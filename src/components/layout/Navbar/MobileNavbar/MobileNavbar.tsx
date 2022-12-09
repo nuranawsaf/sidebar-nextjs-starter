@@ -52,7 +52,7 @@ const MobileNavbar: React.FC = () => {
           ref={containerRef}
         >
           <motion.div className="background" variants={sidebar}>
-            <Navigation />
+            <Navigation toggle={() => toggleOpen()} />
           </motion.div>
           <MenuToggle toggle={() => toggleOpen()} />
         </motion.div>

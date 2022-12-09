@@ -31,11 +31,14 @@ interface MenuItemProps {
     title: string;
     href: string;
   };
+
+  toggle: any;
 }
 
-const MenuItem: React.FC<MenuItemProps> = ({ nav }: { nav: NavdataProps }) => {
+const MenuItem: React.FC<MenuItemProps> = ({ nav, toggle }) => {
   return (
     <motion.li
+      onClick={toggle}
       className="text-theme-gray-4 "
       variants={variants}
       whileHover={{ scale: 1.1 }}
